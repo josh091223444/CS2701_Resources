@@ -4,7 +4,7 @@
         <title>
             Fresh Food For All
         </title>
-        <link rel="stylesheet" href="CS2701-Week4-Registration.css">
+        <link rel="stylesheet" href="Registration.css">
     </head>
     <body>
         <header></header>
@@ -14,6 +14,10 @@
                        The css class of the menu is "navlist"
                        Check lecture slides about lists, an example of a more basic menu, and CSS class selector-->
             <ul class="navlist">
+<li><a href="index.html">Home</a></li>
+        <li><a href="register.html">Register</a></li>
+        <li><a href="login.html">Login</a></li>
+        <li><a href="help.html">Help</a></li>
             </ul>
          </nav>
         <main>
@@ -21,30 +25,42 @@
             <aside>
             </aside>
             <section>
-                <form class="center" novalidate>
-                <!-- ToDo: Implement the form containing 
-                           Name - type text
-                           email- type text
-                           password - type text
-                           Terms of Service - type checkbox
-                           Register - button
-                           Learn more - link
-                           Check lecture slides and the links on the slides to learn about forms
-                           and how to create a button that would react to a click Event
-                        -->
-                    <!-- Example given for user type checkboxes-->
-                    
-                    <input type="checkbox" id="buyer" name="buyer" value="buyer">
-                    <label for="buyer">I want to buy produce directly from allotment owners.</label><br>
-                    <input type="checkbox" id="seller" name="seller" value="seller">
-                    <label for="seller">I want to sell produce from my allotment.</label><br><br>
+  <form class="center" action="/submit_form" method="post" novalidate>
+    <fieldset>
+      <!--<legend>Register</legend>-->
 
-                    <br><br>
-                </form>
-                <div class="center" id="hiddenSection">
-                    <p id="hiddenParagraph"></p>
-                </div>
-            </section>
+      <label for="name">Name:</label><br>
+      <input type="text" id="name" name="name" required><br><br>
+
+      <label for="email">Email:</label><br>
+      <input type="email" id="email" name="email" required><br><br>
+
+      <label for="password">Password:</label><br>
+      <input type="password" id="password" name="password" required><br><br>
+
+      <label for="retype-password">Re-type Password:</label><br>
+      <input type="password" id="retype-password" name="retype-password" required><br><br>
+
+      <input type="checkbox" id="decision1" name="decision1" value="yes">
+      <label for="decision1">I want to buy produce directly from allotment owners.</label><br>
+
+      <input type="checkbox" id="decision2" name="decision2" value="yes">
+      <label for="decision2">I want to sell produce from my allotment.</label><br><br>
+
+      <label>
+        <input type="checkbox" name="agree" required>
+        I agree to the <a href="terms.html" target="_blank">Terms of Use</a> and
+        <a href="privacy.html" target="_blank">Privacy Policy</a>.
+      </label><br><br>
+
+      <!-- Register button -->
+      <button type="submit">Register</button><br><br>
+
+      <!-- Learn more link -->
+      <a href="learn-more.html">Learn more</a>
+    </fieldset>
+  </form>
+</section>
         </main>
     </body>
 </html>
